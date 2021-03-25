@@ -1,12 +1,56 @@
 import React from "react";
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text, ImageBackground, buttonGroup } from "react-native";
 
 import styles from './styles'
 import ActionButton from "../ActionButton";
 
 const CarItem = (props) => {
 
-  const {name, tagline, taglineCTA, image} = props.car;
+  const {name, tagline, taglineCTA, image, buttonGroup} = props.car;
+
+  function InventoryButtons() {
+    if (buttonGroup === 'cars') {
+      return (
+        <View>
+          <ActionButton 
+            type='primary'
+            content='Custom Order'
+            onPress={() => {
+              console.warn('Custom Order button pressed');
+            }}
+          />
+        
+          <ActionButton 
+            type='secondary'
+            content='Existing Inventory'
+            onPress={() => {
+              console.warn('Existing Inventory button pressed');
+            }}
+          />
+        </View>
+      )
+    } else {
+      return (
+        <View>
+          <ActionButton 
+            type='primary'
+            content='Order Now'
+            onPress={() => {
+              console.warn('Order Now button pressed');
+            }}
+          />
+        
+          <ActionButton 
+            type='secondary'
+            content='Learn More'
+            onPress={() => {
+              console.warn('Learn More button pressed');
+            }}
+          />
+        </View>
+      )
+    }
+  }
 
   return (
     <View style={styles.carContainer}>
@@ -23,21 +67,7 @@ const CarItem = (props) => {
         </Text>
       </View>
 
-      <ActionButton 
-        type="primary" 
-        content='Custom Order' 
-        onPress={() => {
-          console.warn('Custom Order button pressed');
-        }}
-      />
-      
-      <ActionButton 
-        type="secondary" 
-        content='Exisiting Inventory' 
-        onPress={() => {
-          console.warn('Existing Inventory button pressed');
-        }}
-      />
+      <InventoryButtons />
     </View>
   );
 };

@@ -9,16 +9,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: '40%',
     width: '100%',
-    position: 'absolute'
+    position: 'absolute',
   },
   carTitle: {
-    fontSize: 40,
+    fontSize: 35,
     fontWeight: '500',
+    textAlign: 'center'
   },
   subTitle: {
-    fontSize: 16,
+    fontSize: 15,
     color: '#5c5e62',
-    marginTop: 5
+    marginTop: 5,
+    paddingHorizontal: 25,
+    textAlign: 'center'
   },
   carImage: {
     width: '100%',
