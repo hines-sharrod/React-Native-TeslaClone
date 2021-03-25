@@ -3,20 +3,20 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   buttonContainer: {
     width: '100%',
-    padding: 25,
-    alignItems: 'center'
+    padding: 10,
+    alignItems: 'center',
+    bottom: 200
   },
   actionButton: {
     borderRadius: 25,
     width: '100%',
-    padding: 20,
-    bottom: 200,
-    backgroundColor: '#000',
-    alignItems: 'center'
+    padding: 15,
+    alignItems: 'center',
   },
   buttonText: {
-    color: '#fff',
-    fontSize: 16
+    fontSize: 16,
+    fontWeight: '500',
+    textTransform: 'uppercase'
   }
 });
 
